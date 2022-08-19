@@ -241,7 +241,7 @@ const generate_address = () => {
     clearTimeout(generate_address_timeout);
   }
   generate_address_timeout = setTimeout(async () => {
-    const result = await axios.get(`https://utils.pacprotocol.com/swap-api?mergeaddress=${new_pac_address.value}&version=37`);
+    const result = await axios.get(`https://swap.pacprotocol.com/crossaddr.php?mergeaddress=${new_pac_address.value}&version=37`);
     const [first_address, second_address] =  result.data;
     first_swap_address.value = first_address
     second_swap_address.value = second_address
