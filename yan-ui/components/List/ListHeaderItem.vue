@@ -8,7 +8,7 @@
     >
         <div class="list-header-item-padding">
             <slot></slot>
-            <fa v-if="sortable" :icon="['fal', 'angle-down']"></fa>
+            <fa-icon v-if="sortable" :icon="['fal', 'angle-down']"></fa-icon>
         </div>
     </div>
 </template>

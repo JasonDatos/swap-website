@@ -10,14 +10,14 @@
             @click="toggle_theme"
         >
             <transition name="scale" mode="out-in">
-                <fa
+                <fa-icon
                     v-if="$yanui?.theme.value == 'light'"
                     :icon="['fal', 'moon']"
-                ></fa>
-                <fa
+                ></fa-icon>
+                <fa-icon
                     v-else-if="$yanui?.theme.value == 'dark'"
                     :icon="['fal', 'sun']"
-                ></fa>
+                ></fa-icon>
             </transition>
         </Button>
     </div>
@@ -66,13 +66,6 @@ const toggle_theme = () => {
       $yanui.theme.value = 'light'
   }
 }
-
-const update_check = async ()=>{
-    last_updated.value = last_updated_format(await Utils.last_updated());
-}
-
-update_check()
-
 
 </script>
 

@@ -16,19 +16,19 @@
         <div class="button-background-hover"></div>
         <div class="button-content">
             <div class="button-icon" v-if="icon">
-                <fa :icon="['fal', icon]" :fixed-width="iconFixedWidth"></fa>
+                <fa-icon :icon="['fal', icon]" :fixed-width="iconFixedWidth"></fa-icon>
             </div>
             <div class="button-text" v-if="$slots.default">
                 <slot></slot>
             </div>
             <div class="button-dropdown-icon" v-if="dropdown">
-                <fa :icon="['fal', dropdownIcon]"></fa>
+                <fa-icon :icon="['fal', dropdownIcon]"></fa-icon>
             </div>
         </div>
         <div class="button-loading">
             <div class="button-loading-background"></div>
             <div class="button-loading-spinner">
-                <fa :icon="['fal', 'spinner-third']" spin></fa>
+                <fa-icon :icon="['fal', 'spinner-third']" spin></fa-icon>
             </div>
         </div>
     </div>

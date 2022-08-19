@@ -31,7 +31,7 @@
                                 class="breadcrumb-dropwdown-item-icon"
                                 v-if="item.icon"
                             >
-                                <fa :icon="['fal', item.icon]"></fa>
+                                <fa-icon :icon="['fal', item.icon]"></fa-icon>
                             </span>
                             <span class="breadcrumb-dropwdown-item-text">{{
                                 item.text
@@ -41,7 +41,7 @@
                 </div>
             </Dropdown>
             <div class="breadcrumb-arrow">
-                <fa :icon="['fal', 'angle-right']"></fa>
+                <fa-icon :icon="['fal', 'angle-right']"></fa-icon>
             </div>
         </div>
         <div
@@ -68,14 +68,14 @@
                         @click="breadcrumb_item_click(item, $index)"
                     >
                         <span class="breadcrumb-item-icon" v-if="item.icon">
-                            <fa :icon="['fal', item.icon]"></fa>
+                            <fa-icon :icon="['fal', item.icon]"></fa-icon>
                         </span>
                         <span class="breadcrumb-item-text">{{
                             item.text
                         }}</span>
                     </div>
                     <div class="breadcrumb-arrow">
-                        <fa :icon="['fal', 'angle-right']"></fa>
+                        <fa-icon :icon="['fal', 'angle-right']"></fa-icon>
                     </div>
                 </div>
             </template>

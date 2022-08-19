@@ -24,7 +24,7 @@
                         {{ textIcon }}
                     </template>
                     <template v-else-if="icon">
-                        <fa v-if="icon" :icon="['fal', icon]" fixed-width></fa>
+                        <fa-icon v-if="icon" :icon="['fal', icon]" fixed-width></fa-icon>
                     </template>
                 </Button>
 
@@ -63,7 +63,7 @@
                         @click="clear_value"
                         :tabindex="-1"
                     >
-                        <fa :icon="['fal', 'times']" fixed-width></fa>
+                        <fa-icon :icon="['fal', 'times']" fixed-width></fa-icon>
                     </Button>
                     <Button
                         :square="true"
@@ -77,7 +77,7 @@
                         @click="settings_visible = !settings_visible"
                         :tabindex="-1"
                     >
-                        <fa :icon="['fal', 'sliders-h']" fixed-width></fa>
+                        <fa-icon :icon="['fal', 'sliders-h']" fixed-width></fa-icon>
                     </Button>
                     <Button
                         :square="true"
@@ -89,12 +89,12 @@
                         class="input-password input-icon-right"
                         :tabindex="-1"
                     >
-                        <fa
+                        <fa-icon
                             v-if="password_visible"
                             :icon="['fal', 'eye-slash']"
                             fixed-width
-                        ></fa>
-                        <fa v-else :icon="['fal', 'eye']" fixed-width></fa>
+                        ></fa-icon>
+                        <fa-icon v-else :icon="['fal', 'eye']" fixed-width></fa-icon>
                     </Button>
                 </div>
             </div>
@@ -125,10 +125,10 @@
             >
                 <div class="input-rule-match-state">
                     <transition name="scale" mode="out-in">
-                        <fa
+                        <fa-icon
                             class="failure-icon"
                             :icon="['fal', 'times-square']"
-                        ></fa>
+                        ></fa-icon>
                     </transition>
                 </div>
                 <div class="input-rule-description-text">
@@ -150,21 +150,21 @@
             >
                 <div class="input-rule-match-state">
                     <transition name="scale" mode="out-in">
-                        <fa
+                        <fa-icon
                             class="success-icon"
                             v-if="rule_match(rule.rule)"
                             :icon="['fal', 'check-square']"
-                        ></fa>
-                        <fa
+                        ></fa-icon>
+                        <fa-icon
                             class="failure-icon"
                             v-else-if="invalid_rules[$index]"
                             :icon="['fal', 'times-square']"
-                        ></fa>
-                        <fa
+                        ></fa-icon>
+                        <fa-icon
                             class="neutral-icon"
                             v-else
                             :icon="['fas', 'square']"
-                        ></fa>
+                        ></fa-icon>
                     </transition>
                 </div>
                 <div class="input-rule-description-text">

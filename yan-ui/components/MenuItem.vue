@@ -6,11 +6,11 @@
     >
         <div class="menu-item-content">
             <div class="menu-item-icon">
-                <fa
+                <fa-icon
                     class="menu-item-icon-direct"
                     fixed-width
                     :icon="['fal', icon]"
-                ></fa>
+                ></fa-icon>
             </div>
             <div class="menu-item-text">
                 {{ text }}

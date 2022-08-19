@@ -14,13 +14,13 @@
         >
             <template v-if="this.data_refresh_completed">
                 <div class="refresh-icon">
-                    <fa :icon="['fal', 'check-circle']"></fa>
+                    <fa-icon :icon="['fal', 'check-circle']"></fa-icon>
                 </div>
                 <div class="refresh-text">Completed!</div>
             </template>
             <template v-else-if="!this.data_refresh_requested">
                 <div class="refresh-icon">
-                    <fa :icon="['fal', 'long-arrow-up']"></fa>
+                    <fa-icon :icon="['fal', 'long-arrow-up']"></fa-icon>
                 </div>
                 <div class="refresh-text">
                     {{
@@ -32,7 +32,7 @@
             </template>
             <template v-else>
                 <div class="refresh-icon">
-                    <fa :icon="['fal', 'spinner-third']" spin></fa>
+                    <fa-icon :icon="['fal', 'spinner-third']" spin></fa-icon>
                 </div>
                 <div class="refresh-text">Loading...</div>
             </template>
@@ -73,7 +73,7 @@
                 <slot></slot>
             </template>
             <div v-if="data_requested" class="list-bottom-loading">
-                <fa :icon="['fal', 'spinner-third']" spin></fa>
+                <fa-icon :icon="['fal', 'spinner-third']" spin></fa-icon>
             </div>
         </div>
     </div>

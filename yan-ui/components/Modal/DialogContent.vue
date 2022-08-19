@@ -11,7 +11,7 @@
         <template #default v-if="content || components">
             <div class="dialog-content-wrapper" v-if="content">
                 <div v-if="icon" class="dialog-icon" :class="[type]">
-                    <fa :icon="['fal', icon]" size="3x" />
+                    <fa-icon :icon="['fal', icon]" size="3x" />
                 </div>
                 <div class="dialog-content">
                     {{ content }}

@@ -1,6 +1,6 @@
 <template>
     <div class="video-load" v-if="!player_visible">
-        <fa :icon="['fal', 'spinner-third']" spin></fa>
+        <fa-icon :icon="['fal', 'spinner-third']" spin></fa-icon>
     </div>
     <video
         ref="video"

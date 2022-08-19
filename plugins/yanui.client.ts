@@ -1,9 +1,11 @@
 import { defineNuxtPlugin } from '#app'
 import {VuePlugin, yanUI} from './../yan-ui/yanUI'
-import FontAwesomeIcon from "../importFontAwesome";
+import "../importFontAwesome";
+
 import {
     FontAwesomeLayers,
     FontAwesomeLayersText,
+    FontAwesomeIcon,
 } from '@fortawesome/vue-fontawesome'
 
 declare module '#app' {
@@ -14,10 +16,10 @@ declare module '#app' {
 
 export default defineNuxtPlugin(nuxtApp => {
     nuxtApp.vueApp.component('fa-text', FontAwesomeLayersText)
-    nuxtApp.vueApp.component('fa', FontAwesomeIcon)
+    nuxtApp.vueApp.component('fa-icon', FontAwesomeIcon)
     nuxtApp.vueApp.use(VuePlugin, {
         icon_component: {
-            name: 'fa',
+            name: 'fa-icon',
             pack: 'fal',
             component: FontAwesomeIcon,
         },

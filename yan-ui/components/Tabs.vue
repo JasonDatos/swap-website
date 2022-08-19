@@ -24,7 +24,7 @@
                         {{ tab.props.title }}
                     </div>
                     <div v-once class="tabs-chevron-right">
-                        <fa :icon="['fal', 'chevron-right']"></fa>
+                        <fa-icon :icon="['fal', 'chevron-right']"></fa-icon>
                     </div>
                 </div>
             </Button>

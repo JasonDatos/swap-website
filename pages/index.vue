@@ -180,7 +180,6 @@ let first_swap_address = ref("");
 let second_swap_address = ref("");
 let entry: any = reactive({});
 const { $yanui } = useNuxtApp()
-console.log("DEFINE",$yanui)
 
 definePageMeta({
   layout: "main"
@@ -370,7 +369,7 @@ const validateAddress = (address: string) => {
     bottom: 0;
     backdrop-filter: blur(3px);
     background: var(--color-black-transparent);
-    color: var(--color-primary-white);
+    color: var(--color-white);
     display: flex;
     justify-content: center;
     align-items: center;

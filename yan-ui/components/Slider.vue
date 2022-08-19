@@ -33,7 +33,7 @@
                     size="is-large"
                     @click="slide('left')"
                 >
-                    <fa :icon="['fal', 'chevron-left']"></fa>
+                    <fa-icon :icon="['fal', 'chevron-left']"></fa-icon>
                 </Button>
             </div>
             <div
@@ -46,7 +46,7 @@
                     size="is-large"
                     @click="slide('right')"
                 >
-                    <fa :icon="['fal', 'chevron-right']"></fa>
+                    <fa-icon :icon="['fal', 'chevron-right']"></fa-icon>
                 </Button>
             </div>
         </div>

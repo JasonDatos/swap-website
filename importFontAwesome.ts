@@ -14,8 +14,6 @@ import {
     faChartPie
 } from '@fortawesome/pro-light-svg-icons'
 
-
-
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 library.add(
@@ -32,5 +30,3 @@ library.add(
     faQuestion,
     faChartPie
 )
-
-export default FontAwesomeIcon

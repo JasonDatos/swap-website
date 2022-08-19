@@ -10,31 +10,31 @@ export class Utils{
     private static timeAgo: TimeAgo = new TimeAgo("en-US");
     public static oudated_versions: any = [];
 
-    public static async pull_outdated_masternode_version() {
-      const res = await axios({
-        method: "GET",
-        url: "/api/outdated-masternode",
-        headers: {
-          'Cache-Control': 'no-cache',
-          'Pragma': 'no-cache',
-          'Expires': '0',
-        }
-      });
-      this.oudated_versions = res.data;
-      return res.data;
-    }
-    public static async last_updated() {
-      const res = await axios({
-        method: "GET",
-        url: "/api/last-update",
-        headers: {
-          'Cache-Control': 'no-cache',
-          'Pragma': 'no-cache',
-          'Expires': '0',
-        }
-      });
-      return res.data;
-    }
+    //public static async pull_outdated_masternode_version() {
+    //  const res = await axios({
+    //    method: "GET",
+    //    url: "/api/outdated-masternode",
+    //    headers: {
+    //      'Cache-Control': 'no-cache',
+    //      'Pragma': 'no-cache',
+    //      'Expires': '0',
+    //    }
+    //  });
+    //  this.oudated_versions = res.data;
+    //  return res.data;
+    //}
+    //public static async last_updated() {
+    //  const res = await axios({
+    //    method: "GET",
+    //    url: "/api/last-update",
+    //    headers: {
+    //      'Cache-Control': 'no-cache',
+    //      'Pragma': 'no-cache',
+    //      'Expires': '0',
+    //    }
+    //  });
+    //  return res.data;
+    //}
 
     public static timeagoFormat(val: number, word: string = "ago"): string {
       //@ts-ignore
