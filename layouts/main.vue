@@ -11,11 +11,11 @@
         >
             <transition name="scale" mode="out-in">
                 <fa
-                    v-if="$yanui.theme.value == 'light'"
+                    v-if="$yanui?.theme.value == 'light'"
                     :icon="['fal', 'moon']"
                 ></fa>
                 <fa
-                    v-else-if="$yanui.theme.value == 'dark'"
+                    v-else-if="$yanui?.theme.value == 'dark'"
                     :icon="['fal', 'sun']"
                 ></fa>
             </transition>
@@ -59,7 +59,7 @@ const toggle_theme = () => {
       document.documentElement.classList.add('theme-dark')
       document.documentElement.classList.remove('theme-light')
       $yanui.theme.value = 'dark'
-  } else {
+  } else if ($yanui) {
       localStorage.setItem('theme', 'light')
       document.documentElement.classList.add('theme-light')
       document.documentElement.classList.remove('theme-dark')

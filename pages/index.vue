@@ -223,12 +223,12 @@ const choose_wallet = (type) => {
 }
 
 const toggle_theme = () => {
-    if ($yanui.theme.value == 'light') {
+    if ($yanui?.theme.value == 'light') {
       localStorage.setItem('theme', 'dark')
       document.documentElement.classList.add('theme-dark')
       document.documentElement.classList.remove('theme-light')
       $yanui.theme.value = 'dark'
-  } else {
+  } else if ($yanui) {
       localStorage.setItem('theme', 'light')
       document.documentElement.classList.add('theme-light')
       document.documentElement.classList.remove('theme-dark')

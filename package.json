@@ -3,13 +3,16 @@
   "scripts": {
     "dev": "PORT=3006 nuxi dev",
     "build": "nuxi build",
-    "start": "node .output/server/index.mjs"
+    "generate": "nuxi generate",
+    "start": "node .output/server/index.mjs",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "devDependencies": {
     "@esbuild-plugins/node-globals-polyfill": "^0.1.1",
     "@esbuild-plugins/node-modules-polyfill": "^0.1.4",
     "nuxt": "^3.0.0-rc.8",
     "nuxt3": "latest",
+    "push-dir": "^0.4.1",
     "sass": "^1.49.9",
     "vite-plugin-commonjs-externals": "^0.1.1"
   },
