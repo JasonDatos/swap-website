@@ -11,7 +11,8 @@ import {
     faTimes,
     faHome,
     faQuestion,
-    faChartPie
+    faChartPie,
+    faClone,
 } from '@fortawesome/pro-light-svg-icons'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -28,5 +29,6 @@ library.add(
     faTimes,
     faHome,
     faQuestion,
-    faChartPie
+    faChartPie,
+    faClone
 )
