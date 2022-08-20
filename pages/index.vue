@@ -125,7 +125,13 @@
           <h2>Step 5</h2>
           Copy & paste this into the Debug log:
           <br><br>
-          <textarea :readonly="true" style="width: 100%">sendmany "" "{\"{{first_swap_address}}\": {{(Number(swap_pac_amount) - 1).toString()}}, \"{{second_swap_address}}\": 1}"</textarea>
+          <textarea class="card card-white" :readonly="true" style="width: 100%">{{get_command()}}</textarea>
+          <Button
+              style="margin-left: auto; margin-bottom: 0; margin-top: 1em"
+              icon="clone"
+              type="is-success"
+              @click="copy_command()"
+          >Copy</Button>
         </div>
         <br>
         <div class="card" :class="{'invalid': !new_pac_address_valid || Number(swap_pac_amount) < 1}" data-step="3">
@@ -212,6 +218,14 @@ watch([new_pac_address], () => {
 
 const router = useRouter();
 
+const get_command = () => {
+  return `sendmany "" "{\"${first_swap_address.value}\": ${(BigInt(swap_pac_amount.value) - 1n).toString()}, \"${second_swap_address.value}\": 1}"`;
+}
+
+const copy_command = () => {
+  console.log("get_command", get_command());
+}
+
 const choose_wallet = (type) => {
   wallet_type_current.value = type;
   router.push({
@@ -257,7 +271,7 @@ const formatBalance = (x, options: any = {  maximumFractionDigits: 8 }) => {
   if (Number(Number(x).toFixed(8)) == 0) {
     x = 0;
   }
-  return new Intl.NumberFormat("en-US", options).format(Number(x));
+  return new Intl.NumberFormat("en-US", options).format(BigInt(x));
 }
 
 const handlePACAmount = (e: any) => {
@@ -367,6 +381,7 @@ const validateAddress = (address: string) => {
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 100000;
     backdrop-filter: blur(3px);
     background: var(--color-black-transparent);
     color: var(--color-white);
