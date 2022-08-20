@@ -199,6 +199,9 @@ a.inline, .a.inline {
     color: var(--color-primary-black);
     box-sizing: border-box;
     transition: background $theme-duration, color $theme-duration;
+    outline: none;
+    border: none;
+    resize: none;
     
     &.no-spacing {
         padding: 0;
