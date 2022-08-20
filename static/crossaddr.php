@@ -1,9 +1,4 @@
 <?php
-header('Access-Control-Allow-Origin: https://swap.pacprotocol.com');
-header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept');
-header("Access-Control-Max-Age", "3600");
-header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token');
-header("Access-Control-Allow-Credentials", "true");
 // crossaddr in php (ugh)
 // (c) barrystyle 29112018
 // needs php-bcmath
